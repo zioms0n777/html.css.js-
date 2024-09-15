@@ -1,0 +1,134 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, hsl(240, 3%, 12%), hsl(244, 60%, 25%));
+    padding: 10px;
+}
+
+.todo-app{
+    width:100%;
+    max-width: 540px;
+    background: hsla(0, 0%, 100%, 0.062);
+    margin:100px auto 20px;
+    border-radius: 20px;
+    padding: 40px 30px 70px;
+}
+
+.todo-app h2
+{
+    color:hsl(29, 100%, 50%);
+    display:flex;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 11vh;
+    gap: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.todo-app h2 img
+{
+width: 50px;
+
+
+margin-left: 10px;
+}
+
+
+.row
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg, hsl(240, 3%, 12%), hsl(244, 60%, 25%));
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input
+{
+    flex: 1;
+    border:none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5rem;
+}
+button
+{
+    border:none;
+    outline: none;
+    padding: 20px 50px;
+    font-size: 15px;
+    cursor:pointer;
+    border-radius: 40px;
+    background: hsl(29, 100%, 50%);
+    color: white;
+    font-weight: 600;
+}
+ul li
+{
+    list-style: none;
+    font-size: 18px;
+    padding:15px 5px 15px 50px;
+    color: hsl(29, 100%, 50%);
+    cursor:pointer;
+    word-wrap: break-word;
+    user-select: none;
+    position:relative;
+}
+ul li::before
+{
+    content: "";
+    position: absolute;
+    height: 38px;
+    width:38px;
+    border-radius: 5%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(images/round.png);
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%)
+
+    
+    
+
+}
+
+ul li.checked
+{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before
+{
+    background-image: url(images/check-mark.png);
+}
+
+ul li span
+{
+    position: absolute;
+    right:0;
+}
+.delete-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px; 
+    cursor: pointer;
+}
+.delete-icon:hover
+{
+    width: 25px;
+    height: 25px;
+}
